@@ -18,7 +18,7 @@ function typeWriter(elementId, text, delay) {
       // Delay the next character
       setTimeout(type, delay);
     } else {
-        setInterval(deleteText, 2000);
+        setTimeout(deleteText, 2000);
     }
   }
   function deleteText() {
@@ -26,17 +26,15 @@ function typeWriter(elementId, text, delay) {
       element.textContent = text.substring(0, index - 1);
       index--;
       setTimeout(deleteText, delay);
+    } else {
+      setTimeout(type, 2000);
     }
   }
 
   // Start typing
   type();
 }
-
-        
-
 typeWriter("hello", "Hello World!", 100);
-
 
 
  
