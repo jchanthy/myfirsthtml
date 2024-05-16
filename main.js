@@ -34,7 +34,4 @@ function typeWriter(elementId, text, delay) {
   // Start typing
   type();
 }
-typeWriter("hello", "Hello World!", 100);
-
-
- 
+typeWriter("hello", 'Hello World!', 100);
